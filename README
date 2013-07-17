@@ -27,7 +27,7 @@ you might have:
 where my-first-post.triples contains:
 
 http://example.com/title data:Hello%20world
-http://example.com/body data:This%20is%20%20the%20text
+http://example.com/body data:This%20is%20%the%20text
 
 Now all of this gets indexed for sorting and searching, and presto:
 the database engine that would be king. :-)
