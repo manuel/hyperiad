@@ -1,0 +1,33 @@
+HYPERIAD
+
+Another Manuel Simoni vaporproduction.
+
+Hyperiad is a content-addressed graph database.
+
+This means that graphs of triples (where subject, predicate, and
+objects are URIs) are stored in Git-like content-addressed storage,
+reaping its benefits (easy verifyability of a whole repository using
+only the root hash; unlimited undo; efficient transfer of changes).
+
+The programmer chooses a directory layout in a way that's optimized
+for content-addressed storage.  For example, if they expect that users
+will frequently add new items (as in a weblog app), a YYYY/MM/DD
+structure makes sense.  In most cases it should be possible to choose
+a directory structure so that the storage costs of content-addressing
+are amortized.  Batching updates further helps to keep costs small.
+
+The leaves (files) contain sets of triples.  For example, in a weblog,
+you might have:
+
+2013/
+  07/
+    17/
+      my-first-post.triples
+
+where my-first-post.triples contains:
+
+http://example.com/title data:Hello%20world
+http://example.com/body data:This%20is%20%20the%20text
+
+Now all of this gets indexed for sorting and searching, and presto:
+the database engine that would be king. :-)
