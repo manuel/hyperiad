@@ -5,7 +5,7 @@ Another Manuel Simoni vaporproduction.
 Hyperiad is a content-addressed graph database.
 
 This means that graphs of triples (where subject, predicate, and
-objects are URIs) are stored in Git-like content-addressed storage,
+object are URIs) are stored in Git-like content-addressed storage,
 reaping its benefits (easy verifyability of a whole repository using
 only the root hash; unlimited undo; efficient transfer of changes).
 
